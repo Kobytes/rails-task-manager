@@ -1,0 +1,14 @@
+<h1><%= @task.title %></h1>
+<div class="edit">
+<%= icon 'fas', 'pen' %> 
+<%= link_to 'Edit the task', tasks_edit_path %>
+</div>
+
+<div class="infos">
+  <p><%= @task.details %></p>
+  <% if @task.completed == true %>
+  <p><input type="checkbox" checked> This task is done.</p>
+  <% else %>
+  <p><input type="checkbox"> This task is not completed yet.</p>
+  <% end %>
+</div>

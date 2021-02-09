@@ -1,0 +1,16 @@
+<h1>New task</h1>
+
+<%= form_for(@task) do |t| %>
+  <%= t.label :title %>
+  <%= t.text_field :title %>
+  <%= t.label :details %>
+  <%= t.text_field :details %>
+  <%= t.label :completed %>
+  <%= t.check_box :completed %>
+  <%= t.submit %>
+<% end %>
+
+<div class="return">
+  <%= icon 'fas', 'undo' %>
+  <%= link_to 'Back to list', tasks_path %>
+</div>
